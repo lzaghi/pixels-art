@@ -1,5 +1,6 @@
 localStorage.setItem('colorBlack', 'selected')
 
+
 const botaoPaleta = document.getElementsByClassName('color')
 
 function defineClasse(event) {
@@ -15,6 +16,7 @@ for (let i = 0; i < botaoPaleta.length; i += 1) {
   botaoPaleta[i].addEventListener('click', defineClasse)
 }
 
+
 const botaoPixel = document.getElementsByClassName('pixel')
 
 function colocaCor(event) {
@@ -27,8 +29,17 @@ for (let j = 0; j < botaoPixel.length; j += 1) {
   botaoPixel[j].addEventListener('click', colocaCor)
 }
 
-// let corSelecionada = document.getElementsByClassName('selected')
-// console.log(corSelecionada);
+
+const botaoLimpar = document.getElementById('clear-board');
+
+function tudoBranco() {
+  for (let i = 0; i < botaoPixel.length; i += 1) {
+    botaoPixel[i].style.backgroundColor = 'white';
+  }
+}
+
+botaoLimpar.addEventListener('click', tudoBranco)
+
 
 function selectedBlack() {
   let classeSelected = localStorage.getItem('colorBlack');
