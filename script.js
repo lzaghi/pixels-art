@@ -19,10 +19,11 @@ for (let i = 0; i < botaoPaleta.length; i += 1) {
 
 const botaoPixel = document.getElementsByClassName('pixel')
 
+
 function colocaCor(event) {
-  let corSelecionada = document.getElementsByClassName('color selected')[0].innerHTML
-  console.log(corSelecionada);
-  event.target.style.backgroundColor = corSelecionada;
+  let elementoSelecionado = document.getElementsByClassName('color selected')[0]
+  let corSelecionada = window.getComputedStyle(elementoSelecionado).backgroundColor;
+  event.target.style.backgroundColor = corSelecionada
 }
 
 for (let j = 0; j < botaoPixel.length; j += 1) {
@@ -39,6 +40,29 @@ function tudoBranco() {
 }
 
 botaoLimpar.addEventListener('click', tudoBranco)
+
+
+const botaoVQV = document.getElementById('generate-board');
+const input = document.getElementById('board-size');
+
+function redimensionaQuadro() {
+  if (input.value === '') {
+    alert('Board Inválido!')
+  }
+  else {
+    let novoTamanho = input.value;
+    console.log(novoTamanho);
+    // for (let i = 0; i < botaoPixel.length; i += 1) {
+    let css = window.getComputedStyle(botaoPixel[0])
+    // css.width = novoTamanho;
+    // css.height = novoTamanho;
+    css.getPropertyValue('width')
+    // console.log(css);
+    // }
+  }
+}
+
+botaoVQV.addEventListener('click', redimensionaQuadro)
 
 
 function selectedBlack() {
