@@ -71,15 +71,14 @@ const input = document.getElementById('board-size');
 const linhas = document.getElementsByClassName('linha');
 
 function redimensionaQuadro() {
-  if (input.value === '') {
+  if (input.value === '' || input.value < 0) {
     alert('Board Inválido!')
   }
   else {
     for (let i = linhas.length - 1; i >= 0 ; i -= 1){
       linhas[i].remove();
     }
-    criaQuadro(input.value)
-    console.log(linhas);
+    criaQuadro(input.value);
     tudoBranco();
   }
 }
