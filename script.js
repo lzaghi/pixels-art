@@ -3,8 +3,18 @@ localStorage.setItem('colorBlack', 'selected')
 
 function criaQuadro(n) {
   const paiLinhas = document.getElementById('pixel-board');
+  
+  let quantidade = n
 
-  for(let index = 0; index < n; index += 1) {
+  if (n < 5) {
+    quantidade = 5
+  }
+  else if (n > 50) {
+    quantidade = 50
+  }
+
+
+  for(let index = 0; index < quantidade; index += 1) {
     let linha = document.createElement('div')
     linha.className = 'linha'
   
@@ -15,7 +25,7 @@ function criaQuadro(n) {
   
   for(let jindex = 0; jindex < paiPixels.length; jindex += 1) {
     
-    for(let p = 0; p < n; p += 1){
+    for(let p = 0; p < quantidade; p += 1){
       let pixel = document.createElement('div')
       pixel.className = 'pixel'
     
