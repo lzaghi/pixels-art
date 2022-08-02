@@ -26,7 +26,8 @@
         <div class="color" ></div>
       </section>
   
-      <input type="number" min="0" id="board-size" >
+      <input type="number" min="1" id="board-size" oninput="validity.valid||(value='');" >
+
       <!-- oninput="validity.valid || (value='');" -->
 
       <button id="generate-board" >VQV</button>

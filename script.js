@@ -71,7 +71,7 @@ const input = document.getElementById('board-size');
 const linhas = document.getElementsByClassName('linha');
 
 function redimensionaQuadro() {
-  if (input.value === '' || input.value < 0) {
+  if (input.value === '') {
     alert('Board Inválido!')
   }
   else {
