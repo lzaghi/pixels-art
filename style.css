@@ -23,22 +23,18 @@ button {
 
 .color:nth-of-type( 1 ) {
   background-color: black;
-  color: black;
 }
 
 .color:nth-of-type( 2 ) {
   background-color: red;
-  color: red;
 }
 
 .color:nth-of-type( 3 ) {
   background-color: green;
-  color: green;
 }
 
 .color:nth-of-type( 4 ) {
   background-color: blue;
-  color: blue;
 }
 
 .pixel {
@@ -47,5 +43,8 @@ button {
   border: 1px solid black;
   width: 40px;
   height: 40px;
-  
+}
+
+.linha {
+  height: 40px;
 }

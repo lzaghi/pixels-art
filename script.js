@@ -44,6 +44,7 @@ botaoLimpar.addEventListener('click', tudoBranco)
 
 const botaoVQV = document.getElementById('generate-board');
 const input = document.getElementById('board-size');
+const linhas = document.getElementsByClassName('linha');
 
 function redimensionaQuadro() {
   if (input.value === '') {
@@ -51,14 +52,16 @@ function redimensionaQuadro() {
   }
   else {
     let novoTamanho = input.value;
-    console.log(novoTamanho);
-    // for (let i = 0; i < botaoPixel.length; i += 1) {
-    let css = window.getComputedStyle(botaoPixel[0])
-    // css.width = novoTamanho;
-    // css.height = novoTamanho;
-    css.getPropertyValue('width')
-    // console.log(css);
-    // }
+    
+    for (let i = 0; i < botaoPixel.length; i += 1) {
+      botaoPixel[i].style.width = novoTamanho + 'px'
+      botaoPixel[i].style.height = novoTamanho + 'px'
+    }
+
+    for (let j = 0; j < linhas.length; j += 1) {
+      linhas[j].style.height = novoTamanho + 'px'
+    }
+    tudoBranco();
   }
 }
 
