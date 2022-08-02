@@ -1,6 +1,30 @@
 localStorage.setItem('colorBlack', 'selected')
 
 
+function criaQuadro(n) {
+  const paiLinhas = document.getElementById('pixel-board');
+
+  for(let index = 0; index < n; index += 1) {
+    let linha = document.createElement('div')
+    linha.className = 'linha'
+  
+    paiLinhas.appendChild(linha);
+  }
+  
+  const paiPixels = document.getElementsByClassName('linha');
+  
+  for(let jindex = 0; jindex < paiPixels.length; jindex += 1) {
+    
+    for(let p = 0; p < n; p += 1){
+      let pixel = document.createElement('div')
+      pixel.className = 'pixel'
+    
+      paiPixels[jindex].appendChild(pixel);
+    }
+  }
+}
+criaQuadro(5)
+
 const botaoPaleta = document.getElementsByClassName('color')
 
 function defineClasse(event) {
@@ -51,16 +75,11 @@ function redimensionaQuadro() {
     alert('Board Inválido!')
   }
   else {
-    let novoTamanho = input.value;
-    
-    for (let i = 0; i < botaoPixel.length; i += 1) {
-      botaoPixel[i].style.width = novoTamanho + 'px'
-      botaoPixel[i].style.height = novoTamanho + 'px'
+    for (let i = linhas.length - 1; i >= 0 ; i -= 1){
+      linhas[i].remove();
     }
-
-    for (let j = 0; j < linhas.length; j += 1) {
-      linhas[j].style.height = novoTamanho + 'px'
-    }
+    criaQuadro(input.value)
+    console.log(linhas);
     tudoBranco();
   }
 }
