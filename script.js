@@ -35,6 +35,7 @@ function criaQuadro(n) {
 }
 criaQuadro(5)
 
+
 const botaoPaleta = document.getElementsByClassName('color')
 
 function defineClasse(event) {
@@ -52,7 +53,6 @@ for (let i = 0; i < botaoPaleta.length; i += 1) {
 
 
 const botaoPixel = document.getElementsByClassName('pixel')
-
 
 function colocaCor(event) {
   let elementoSelecionado = document.getElementsByClassName('color selected')[0]
@@ -96,6 +96,51 @@ function redimensionaQuadro() {
 botaoVQV.addEventListener('click', redimensionaQuadro)
 
 
+function corAleatoria1() {
+  let caracteres = '0123456789ABCDEF';
+  let color = '#';
+
+    for (let i = 0; i < 6; i += 1) {
+      color += caracteres[Math.floor(Math.random() * 16)];
+    }
+    localStorage.setItem('cor1', color);
+}
+
+function corAleatoria2() {
+  let caracteres = '0123456789ABCDEF';
+  let color = '#';
+
+    for (let i = 0; i < 6; i += 1) {
+      color += caracteres[Math.floor(Math.random() * 16)];
+    }
+    localStorage.setItem('cor2', color);
+}
+
+function corAleatoria3() {
+  let caracteres = '0123456789ABCDEF';
+  let color = '#';
+
+    for (let i = 0; i < 6; i += 1) {
+      color += caracteres[Math.floor(Math.random() * 16)];
+    }
+    localStorage.setItem('cor3', color);
+}
+
+
+function atribuiCor() {
+  let paletas = document.querySelectorAll('.color')
+
+  let cor1 = localStorage.getItem('cor1')
+  paletas[1].style.backgroundColor = cor1
+
+  let cor2 = localStorage.getItem('cor2')
+  paletas[2].style.backgroundColor = cor2
+
+  let cor3 = localStorage.getItem('cor3')
+  paletas[3].style.backgroundColor = cor3
+}
+
+
 function selectedBlack() {
   let classeSelected = localStorage.getItem('colorBlack');
   let paletaPreta = document.getElementsByClassName('color')[0];
@@ -103,4 +148,10 @@ function selectedBlack() {
   paletaPreta.classList.add(classeSelected)
 }
 
-window.onload = selectedBlack();
+window.onload = function () {
+  selectedBlack();
+  corAleatoria1();
+  corAleatoria2();
+  corAleatoria3();
+  atribuiCor();
+}
