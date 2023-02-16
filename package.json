@@ -1,4 +1,5 @@
 {
+  "homepage": "https://lzaghi.github.io/pixels-art",
   "devDependencies": {
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.2.0",
@@ -16,6 +17,8 @@
     "mochawesome-report-generator": "4.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "cypress run",
     "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json .",
     "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input",
