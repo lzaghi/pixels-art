@@ -84,7 +84,7 @@ input,
   background-color: black;
 }
 
-.color:nth-of-type(2) {
+/* .color:nth-of-type(2) {
   background-color: red;
 }
 
@@ -94,7 +94,7 @@ input,
 
 .color:nth-of-type(4) {
   background-color: blue;
-}
+} */
 
 #pixel-board {
   margin-top: 1%;
