@@ -1,24 +1,83 @@
 body {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
-section,
+header,
+section#color-palette,
 input,
-button {
-  margin-top: 4%;
+#buttons {
+  margin-top: 3%;
+}
+#title {
+  font-size: 2.3rem;
 }
 
+#buttons {
+  display: flex;
+  width: 250px;
+  margin-inline: auto;
+}
+
+#reset-pallete,
 #clear-board {
+  width: 75px;
+  height: 75px;
+  margin-inline: 15px;
+  border: 1px solid black;
+  font-size: 0.9rem;
+}
+
+#reset-pallete,
+#clear-board,
+#generate-board {
+  font-family: 'Montserrat', sans-serif;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  border: none;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 100px 100px 100px 100px;
+  transition: 0.3s;
+}
+
+#generate-board {
+  margin-top: 1%;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+#color-palette {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .color {
-  border: 1px solid black;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
+  /* display: inline-block; */
+  margin-inline: 3px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+#reset-pallete:hover,
+#clear-board:hover,
+#generate-board:hover {
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.color:hover {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  transition: 0.5s;
 }
 
 .color:nth-of-type(1) {
@@ -35,6 +94,10 @@ button {
 
 .color:nth-of-type(4) {
   background-color: blue;
+}
+
+#pixel-board {
+  margin-top: 1%;
 }
 
 .pixel {

@@ -132,6 +132,16 @@ function atribuiCor() {
 }
 
 
+const botaoResetar = document.getElementById('reset-pallete');
+
+function resetaPaleta() {
+  corAleatoriaInicial();
+  atribuiCor();
+}
+
+botaoResetar.addEventListener('click', resetaPaleta)
+
+
 function selectedBlack() {
   let classeSelected = localStorage.getItem('colorBlack');
   let paletaPreta = document.getElementsByClassName('color')[0];
