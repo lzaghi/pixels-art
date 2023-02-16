@@ -40,7 +40,7 @@ const botaoPaleta = document.getElementsByClassName('color')
 
 function defineClasse(event) {
   for (let i = 0; i < botaoPaleta.length; i += 1) {
-    if (botaoPaleta[i].classList = 'color selected') {
+    if (botaoPaleta[i].classList.value === 'color selected') {
       botaoPaleta[i].classList.remove('selected')
     }
   }
@@ -91,39 +91,30 @@ function redimensionaQuadro() {
     criaQuadro(input.value);
     tudoBranco();
   }
+
+  for (let j = 0; j < botaoPixel.length; j += 1) {
+    botaoPixel[j].addEventListener('click', colocaCor)
+  }
 }
 
 botaoVQV.addEventListener('click', redimensionaQuadro)
 
 
-function corAleatoria1() {
+function corAleatoria() {
   let caracteres = '0123456789ABCDEF';
   let color = '#';
 
     for (let i = 0; i < 6; i += 1) {
       color += caracteres[Math.floor(Math.random() * 16)];
     }
-    localStorage.setItem('cor1', color);
+  return color
 }
 
-function corAleatoria2() {
-  let caracteres = '0123456789ABCDEF';
-  let color = '#';
-
-    for (let i = 0; i < 6; i += 1) {
-      color += caracteres[Math.floor(Math.random() * 16)];
-    }
-    localStorage.setItem('cor2', color);
-}
-
-function corAleatoria3() {
-  let caracteres = '0123456789ABCDEF';
-  let color = '#';
-
-    for (let i = 0; i < 6; i += 1) {
-      color += caracteres[Math.floor(Math.random() * 16)];
-    }
-    localStorage.setItem('cor3', color);
+function corAleatoriaInicial() {
+  for (let i = 1; i <= 3; i += 1) {
+    const color = corAleatoria();
+    localStorage.setItem(`cor${i}`, color);
+  }
 }
 
 
@@ -150,8 +141,6 @@ function selectedBlack() {
 
 window.onload = function () {
   selectedBlack();
-  corAleatoria1();
-  corAleatoria2();
-  corAleatoria3();
+  corAleatoriaInicial();
   atribuiCor();
 }
