@@ -111,3 +111,7 @@ input,
 .linha {
   height: 40px;
 }
+
+.selected {
+  border: 5px solid lightgray;
+}
