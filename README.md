@@ -3,7 +3,7 @@
 
 Essa é uma aplicação que implementa um editor de artes pixeladas, que possibilita a escolha de cores em uma paleta para pintar um quadro em branco.
 
-O foco desse projeto foi explorar a manipulação de elementos DOM.
+O foco desse projeto foi explorar a manipulação de elementos DOM e os escutadores de eventos.
 
 [Experimente!](https://lzaghi.github.io/pixels-art/)
 
