@@ -43,7 +43,5 @@ HTML, CSS, JavaScript, DOM, LocalStorage
   npm install
 ```
 4. Inicie a aplicação com a extensão Live Server do VSCode
-
-A aplicação estará disponível em ```http://127.0.0.1:5501/```
     
 
