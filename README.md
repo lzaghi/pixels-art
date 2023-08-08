@@ -23,7 +23,7 @@ O foco desse projeto foi explorar a manipulação de elementos DOM.
 
 ## Tecnologias utilizadas
 
-HTML, CSS, JavaScript, LocalStorage
+HTML, CSS, JavaScript, DOM, LocalStorage
 
 
 ## Instalação local
