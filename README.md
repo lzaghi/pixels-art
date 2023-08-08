@@ -1,13 +1,49 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+# Pixels Art
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Essa é uma aplicação que implementa um editor de artes pixeladas, que possibilita a escolha de cores em uma paleta para pintar um quadro em branco.
+
+O foco desse projeto foi explorar a manipulação de elementos DOM.
+
+[Experimente!](https://lzaghi.github.io/pixels-art/)
+
+## Funcionalidades
+
+- Geração de uma paleta inicial aleatória
+- Possibilidade de resetar a paleta com novas cores aleatórias
+- Selecionar cor da paleta
+- Usar a cor selecionada para pintar o quadro em branco
+- Redimensionar o quadro de pintura
+- Limpar o quadro de pintura
+
+## Demonstração
+
+![](pixels.gif)
+
+
+## Tecnologias utilizadas
+
+HTML, CSS, JavaScript, LocalStorage
+
+
+## Instalação local
+
+1. Clone o repositório 
+```bash
+  git clone git@github.com:lzaghi/pixels-art.git
+```
+
+2. Entre no diretório 
+```bash
+  cd pixels-art
+```
+
+3. Instale as dependências 
+```bash
+  npm install
+```
+4. Inicie a aplicação com a extensão Live Server do VSCode
+
+A aplicação estará disponível em ```http://127.0.0.1:5501/```
+    
+
